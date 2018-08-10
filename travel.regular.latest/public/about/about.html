@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <div id="nav-container">
+    </div>
+    <title>About Page</title>
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <div id="nav-container"></div>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-onlƒy">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" class="headermain">TravelDumb</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="homep">
+                        <a href="../homepage/home.html">Home</a>
+                    </li>
+                    <li class="active" id="aboutp">
+                        <a href="../about/about.html" id="aboutp">About</a>
+                    </li>
+                    <li id="contactp">
+                        <a href="../contact/contact.html">Contact</a>
+                    </li>
+                    <li id="getstartedp">
+                        <a href="../search/index.html">Get Started!</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="margin-bottom: -8px; margin-top: -6px">
+                    <li id="loginp" style="margin-top: 4px">
+                        <a href="../authorize/signpage/signin.html">Signup or Login
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li>
+                    <li id="signoutp">
+                        <a>
+                            <button type="submit" class="btn btn-light" value="Sign Out" onclick="logout();" style="background-color: #e7e7e7">Logout</button>
+                            <!--<i class="fa fa-user"></i>-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 style="color:  #fff;margin-top: 150px;">About TravelDumb</h1>
+    <hr class="style1" width="320" style="border-top: 1px solid #fff">
+    <h4 style="color: #fff;">Travel is an interactive travel assistant to help you with planning your ideal trip.</h4>
+    <hr class="style1" width="640" style="margin-bottom: 89px; border-top: 1px solid #fff">
+    <div class="row"></div>
+    <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <div style="margin-bottom: 8px;text-align:  center;padding:  10px; font-size: 18px">Sick of scrolling through various internet pages to get what you want? Let TravelDumb take the mundane part out
+                of planning your trip!</div>
+
+            <img class ="mySlides" src="https://images.unsplash.com/photo-1522199710521-72d69614c702?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=272dda12b7480a098e1320036ac49966&auto=format&fit=crop&w=1052&q=80">
+            <img class="mySlides" src="https://images.unsplash.com/reserve/unsplash_529f1a3f2f5ed_1.JPG?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=785d12357e28e52c34374f11110bf0cd&auto=format&fit=crop&w=753&q=80">
+            
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+        <div></div>
+        <div class="thumbnail">
+            <div style="margin-bottom: 8px;text-align:  center;padding:  10px; font-size: 18px">Simply register and enter in your interests and TravelDumb will suggest a trip based on your selection and month
+                of travel, it's really that easy!</div>
+            <img class="mySlides2" src="https://images.unsplash.com/photo-1516161786189-4c01a74daa94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55cfa2e8e44331edc7d4995fd4af582d&auto=format&fit=crop&w=749&q=80">
+            <img class ="mySlides2" src="https://images.unsplash.com/photo-1480504612934-8170966f69e0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5efe08894135c7ea0096d6b9553adf4d&auto=format&fit=crop&w=1050&q=80">
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <div style="margin-bottom: 8px;text-align:  center;padding:  10px; font-size: 18px">TravelDumb will only show you what's relative to your trip and if there is nothing suitable, we will suggest
+                something else close to your criteria!</div>
+            
+            <img class="mySlides3" src="https://images.unsplash.com/photo-1460627390041-532a28402358?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d0363f849f9425a8a61f560ca83d71bb&auto=format&fit=crop&w=1050&q=80">
+            <img class="mySlides3" src="https://images.unsplash.com/photo-1446944987594-eb9bb99c6e22?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8cc23e498ab0997e45abd6ac20ea70e&auto=format&fit=crop&w=1053&q=80">
+        </div>
+    </div>
+
+    
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="./about.js"></script>
+<script src="./aboutfire.js"></script>
+<script src="../authorize/signpage/signin.js"></script>
+
+</html>

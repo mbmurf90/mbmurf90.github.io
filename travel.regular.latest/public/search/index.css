@@ -1,0 +1,94 @@
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/*font-family:Arial;*/
+	font-size:20px;
+	font-weight:bold;
+	padding:10px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/*body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }*/
+html, button, input, select, textarea, .pure-g [class *= "pure-u"] { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.02em; }
+p, td { line-height: 1.5; }
+ul { padding: 0 0 0 20px; }
+
+th { background: #eee; white-space: nowrap; }
+th, td { padding: 10px; text-align: left; vertical-align: top; font-size: .9em; font-weight: normal; border-right: 1px solid #fff; }
+td:first-child { white-space: nowrap; color: #008000; width: 1%; font-style: italic; }
+
+h1, h2, h3 { color: #4b4b4b; font-family: "Source Sans Pro", sans-serif; font-weight: 300; margin: 0 0 1.2em; }
+h1 { font-size: 4.5em; color: #1f8dd6; margin: 0 0 .4em; }
+h2 { font-size: 2em; color: #636363; }
+h3 { font-size: 1.8em; color: #4b4b4b; margin: 1.8em 0 .8em }
+h4 { font: bold 1em sans-serif; color: #636363; margin: 4em 0 1em; }
+a { color: #4e99c7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin: 0 0 1.2em; }
+::selection { color: #fff; background: #328efd; }
+::-moz-selection { color: #fff; background: #328efd; }
+
+@media (max-width:480px) {
+	h1 { font-size: 3em; }
+	h2 { font-size: 1.8em; }
+	h3 { font-size: 1.5em; }
+	td:first-child { white-space: normal; }
+}
+
+.inline-code { padding: 1px 5px; background: #eee; border-radius: 2px; }
+pre {
+	margin: 10px 0; overflow: auto; white-space: pre; word-wrap: normal;
+	border: 0 !important; padding: 8px 10px !important; line-height: 18px; background: #edf3f8;
+	font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 14px;
+}
+
+/* Pure CSS */
+.pure-button { margin: 5px 0; text-decoration: none !important; }
+.button-lg { margin: 5px 0; padding: .65em 1.6em; font-size: 105%; }
+
+/*input[type="text"] { border-radius: 0 !important; }*/
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+	height: 85%;
+	margin-bottom: -20px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	background: linear-gradient(to right, #4ca3cd, #67B26f);
+}

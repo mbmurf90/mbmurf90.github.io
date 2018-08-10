@@ -1,3 +1,27 @@
-img{
-	background-size: 100%;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+    background-size: cover;
+}
+img {
+    display: none;
+}
+
+h1{
+	text-align: center;
+}
+ p {
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
 }
