@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mainpage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../../images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../vectors/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/util.css">
+    <link rel="stylesheet" type="text/css" href="../../vectors/main.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="../signpage/signin.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="JQUERY%20Main.js"></script>
+
+</head>
+
+<body>
+    <div id="nav-placeholder">
+        <div id="dropDownSelect1">
+        </div>
+        <div id="main">
+            <div class="nav n1">
+                <span>0 FT</span>
+            </div>
+            <div class="nav n2">
+                <span>1000 FT</span>
+            </div>
+            <div class="nav n3">
+                <span>10000 FT</span>
+            </div>
+            <div class="nav n4">
+                <span>40000 FT</span>
+            </div>
+            <div id="mainImg">
+                <img src="../signpage/signinimg/window.png" height="100%" width="100%" />
+            </div>
+            <div id="bgImgs">
+                <img src="../signpage/signinimg/1.jpg" id="bg1" height="110%" width="110%" />
+                <img src="../signpage/signinimg/2.jpg" id="bg2" height="110%" width="110%" />
+                <img src="../signpage/signinimg/3.jpg" id="bg3" height="110%" width="110%" />
+                <img src="../signpage/signinimg/4.jpg" id="bg4" height="110%" width="110%" />
+            </div>
+        </div>
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+                <div class="main-div" id="login_div">
+                    <span class="login100-form-title p-b-37"> Welcome
+                    </span>
+                    <div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+                        <input type="email" placeholder="Email..." id="email_field" class="input100" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input m-b-25" data-validate="Enter password">
+                        <input type="password" placeholder="Password..." id="password_field" class="input100" />
+                        <span class="focus-input100"></span>
+                    </div>
+                    <br>
+                    <div class="container-login100-form-btn">
+                        <div id="createacc">
+                            <td colspan=2>
+                                <button onclick="create_account();" id="createacc" class="login100-form-btn">
+                                    Create Account
+                                </button>
+                            </td>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <td colspan=2>
+                            <button onclick="login();" class="login100-form-btn">
+                                Login
+                            </button>
+                            <br>
+                        <br>
+                        <br>
+                        <br>
+                        </td>
+                    </div>
+                </div>
+                <div class="container-login100-form-btn">
+                    <div class="loggedin-div" id="user_div">
+                        <td colspan=2>
+                            <button onclick="send_verification();" class="login100-form-btn" id="verify_btn">
+                                Send Verification
+                            </button>
+                        </td>
+                        <br>
+                    </div>
+                    <div id="googleSignIn">
+
+
+                        <td colspan=2>
+                            
+                              <footer>
+                                <a href="#"><i class="fa fa-facebook" onClick="callFacebookSignIn();"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <!--<a href="#"><i class="fa fa-linkedin"></i></a>-->
+                                <a href="#"><i class="fa fa-google-plus"  onclick="callGoogleSignIn();"></i></a>
+                                <!--<a href="#"><i class="fa fa-skype"></i></a>-->
+                              </footer>
+                           <!-- <div class="addthis_toolbox addthis_default_style ">
+                                <a class="addthis_button_facebook_like" fb:like:layout="button_count" onclick="callFacebookSignIn()"></a>
+                                <a class="addthis_button_tweet"></a>
+
+                                <!--<a class="addthis_button_pinterest_pinit"></a>
+                                <a class="addthis_counter addthis_pill_style"></a>-->
+                            </div>
+                           <!-- <button onclick="callGoogleSignIn();" id="googleSignIn" class="login100-form-btn">Login with Google </button>
+                            <g:plusone></g:plusone onclick="callGoogleSignIn();">
+
+                            <!--<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="YourSite">Tweet</a>
+                            <a class="ttip-none" title="Facebook" onClick=callFacebookSignIn();"><i class="fa fa-facebook"></i></a>-->
+                        </td>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div id="facebookSignIn">
+                        <td colspan=2>
+                            <!--<button onclick="callFacebookSignIn();" id="facebookSignIn" class="login100-form-btn">Login with Facebook </button>-->
+                        </td>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script src="./signin.js"></script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-513375c7395449c1"></script>
+        <!-- <script src="public/firebasefiles/firebaseauthen.js"></script> -->
+        <script src="../../vectors/jquery/jquery-3.2.1.min.js"></script>
+        <script src="../../vectors/animsition/js/animsition.min.js"></script>
+        <script src="../../vectors/bootstrap/js/popper.js"></script>
+        <script src="../../vectors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../vectors/select2/select2.min.js"></script>
+        <script src="../../vectors/daterangepicker/moment.min.js"></script>
+        <script src="../../vectors/daterangepicker/daterangepicker.js"></script>
+        <script src="../../vectors/countdowntime/countdowntime.js"></script>
+</body>
+
+</html>

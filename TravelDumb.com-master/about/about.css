@@ -1,0 +1,17 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(to right, #4ca3cd, #67B26f);
+}
+h1 {
+    text-align: center;
+}
+h4 {
+    text-align: center;
+}
+html {
+    height: 100%;
+}
+hr.style1 {
+    border-top: 1px solid #8c8b8b;
+}

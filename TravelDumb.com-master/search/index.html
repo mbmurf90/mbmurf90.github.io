@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Travel Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">-->
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/pure-min.css">-->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="./home.css">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="-->
+        <!--crossorigin="anonymous"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="autocomplete/auto-complete.css">
+</head>
+<body onload="pageLoad()">
+        <nav class="navbar navbar-default" style="margin-bottom: 0">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-onlƒy">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand headermain" href="#">TravelDumb</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" id="homep">
+                    <li class="">
+                        <a href="../homepage/home.html">Home</a>
+                    </li>
+                    <li id="aboutp">
+                        <a href="../about/about.html" id="about">About</a>
+                    </li>
+                    <li id="contactp">
+                        <a href="../contact/contact.html">Contact</a>
+                    </li>
+                    <li class="active" id="getstartedp">
+                        <a href="../search/index.html">Get Started!</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="margin-bottom: -8px; margin-top: -6px">
+
+                    <!--PREVIOUSLY REMOVED-->
+                    <!-- <li id="loginp">
+                        <a href="../authorize/signpage/signin.html">Signup or Login
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li> -->
+
+                    <li id="signoutp">
+                        <a>
+                            <button type="submit" class="btn btn-light" value="Sign Out" onclick="logout();" style="background-color: #e7e7e7">Logout</button>
+                            <!--<i class="fa fa-user"></i>-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--<script src="./searchfire.js"></script>-->
+<div id="warning-sign"></div>
+<form onsubmit="return false;" class="pure-form" style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#ffffff;margin:5px 0;padding:20px 10px;text-align:center">
+    <div class="form-inline">
+    <div class="form-group" style="width: 85%;">
+
+    <select id="continent" onchange="positionUpdated()" class="form-control" style="width: 12%;">
+        <option value="default">Continent</option>
+        <option value="NA">North America</option>
+        <option value="EU">Europe</option>
+        <option value="AS">Asia</option>
+        <option value="SA">South America</option>
+        <option value="AF">Africa</option>
+        <option value="OC">Oceania</option>
+        <option value="AN">Antarctica</option>
+    </select>
+
+    <input onchange="disableUpdate()" class="form-control" id="search-box" autofocus type="text" name="q" placeholder="Search location" style="width:24%;max-width:350px;margin-top: 1px;">
+    <!-- INSERT TYPEAHEAD SEARCH -->
+
+    <select class="form-control" style="width: 8%;" id="date">
+        <option value="default">Month</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+    </select>
+    <select id="activity" class="form-control" style="width: 12%;">
+        <option value="default">Activity</option>
+        <option value="a1">Beaches</option>
+        <option value="a2">Skiing</option>
+        <option value="a3">Theme Parks</option>
+    </select>
+
+    <div class="btn-group-toggle" data-toggle="buttons" style="display: inline-block">
+        <label id="checkbox-toggle" class="btn btn-success inactive" style="margin-top: 1px">
+            <input id="checkbox-search" type="checkbox" autocomplete="off"> Nearby
+        </label>
+    </div>
+    <button onclick="post()" class="btn btn-primary" style="width:100%; max-width: 80px; margin-top: 1px;">GO</button>
+    </div>
+    </div>
+</form>
+<div id="map"></div>
+<div id="content"></div>
+
+<script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+<script src="autocomplete/auto-complete.js"></script>
+<script src="autocomplete/auto-complete-script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfSDqqjDt4yf7I530afnuVNYtj0sq20fE"></script>
+<script src="indexfire.js"></script>
+<script src="../authorize/signpage/signin.js"></script>
+<!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" async defer></script>-->
+</body>
+</html>

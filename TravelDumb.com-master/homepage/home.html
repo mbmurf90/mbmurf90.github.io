@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="-->
+        <!--crossorigin="anonymous"></script>-->
+</head>
+
+<body onload="getGeoPosition()">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-onlƒy">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" class="headermain">TravelDumb</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" id="homep">
+                    <li class="active">
+                        <a href="../homepage/home.html">Home</a>
+                    </li>
+                    <li id="aboutp">
+                        <a href="../about/about.html" id="aboutp">About</a>
+                    </li>
+                    <li id="contactp">
+                        <a href="../contact/contact.html">Contact</a>
+                    </li>
+                    <li id="getstartedp">
+                        <a href="../search/index.html">Get Started!</a>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="margin-bottom: -8px; margin-top: -6px">
+                    <li id="loginp" style="margin-top: 4px">
+                        <a href="../authorize/signpage/signin.html">Signup or Login
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li>
+                    <li id="signoutp">
+                        <a>
+                            <button type="submit" class="btn btn-light" value="Sign Out" onclick="logout();" style="background-color: #e7e7e7">Logout</button>
+                            <!--<i class="fa fa-user"></i>-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container"></div>
+    <img src="./homeimg/earthlights.jpg">
+    <div class="text-block">
+        <h1>TravelDumb.com</h1>
+        <h2 style="text-align: center;">Wonder no more</h2>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script src="./homefire.js"></script>
+        <script src="./home.js"></script>
+        <script src="../authorize/signpage/signin.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
