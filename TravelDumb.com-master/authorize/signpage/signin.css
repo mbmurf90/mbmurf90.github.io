@@ -2,7 +2,7 @@ body {
     background: url(https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
     background-size: cover;
     background-position: center;
-/*    overflow: hidden;*/
+    overflow: hidden;
 }
 html {
     height: 100%;
