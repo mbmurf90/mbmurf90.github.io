@@ -1,15 +1,26 @@
-body{
-	background-size: cover;
-	background-position: center;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 h1, h4{
 	text-align: center;
 }
-html{
-	height: 100%;
-}
+
 
 a{
 	align-content: center;
+}
+
+i{
+    float: right;
+    margin-right: 10px;
+    color: black;
+}
+
+div{
+	float: left;
 }
