@@ -12,7 +12,8 @@ h1, h4{
 
 
 a{
-	align-content: center;
+	text-align:center;
+	display:block;
 }
 
 i{
@@ -21,6 +22,23 @@ i{
     color: black;
 }
 
-div{
-	float: left;
+img{
+	max-height: 210px;
+	max-width: 270px;
 }
+
+.thumbnail{
+	max-height: 270px;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: ". . ." ". . .";
+  padding: 10px;
+}
+
+
