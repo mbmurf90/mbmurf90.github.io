@@ -35,3 +35,8 @@ i{
     font-family: helvetica;
     font-size: 1.3em;
 }
+.navbar.navbar-expand-lg, .navbar-light.bg-dark{
+    padding: 0 !important;
+     margin: 0 !important;
+     border-radius: 0 !important;
+}
