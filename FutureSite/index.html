@@ -4,6 +4,7 @@
 	<title>Future Site</title>
 	<link type="text/css" rel="stylesheet" href="index.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -11,6 +12,7 @@
 <script src="semantic/dist/semantic.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
     <script src="mgGlitch.min.js"></script>
+    <script src="t.min.js"></script>
 </head>
 <body>
 <div class="ui inverted menu">
@@ -18,17 +20,44 @@
     Home
   </a>
   <a class="active item">
-    Alternative webpage
+    Halloween webpage
   </a>
   <a class="item"  href="../projects.html">
     Projects
   </a>
+  <a href="https://www.linkedin.com/in/mark-murphy-a3924654/"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+  <a href="https://github.com/mbmurf90"><i class="fa fa-github" style="font-size:36px"></i></a>
 </div>
-	<div class="container">
-        <div class="glitch-img" style="background-image: url('codephoto1.png')"></div>
-        <div class="ui stacked segment">
-  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-</div>
+  <section class="sec1">
+    <div class="rain"></div>
+  </section>
+  <section class="secText">
+    <pre id="main">
+Message from the beyond<ins><span id="pow-txt"></span></ins>
+<span id="tagline">Please do not enter these hallowed grounds.<ins>1.5</ins><br>Many have entered and never returned.<br>You have been warned!</span><del></del><del id="pow-trigger"></del>
+</pre>
+
+    <script>
+    
+    $('#main').t({
+ beep:true,
+ caret:'<span style="color:black;">•</span>',
+ typing:function(elm,chr){
+
+   if(chr.match(/\-trigger/))
+     $('#pow-txt').show().delay(1000).fadeOut(0);
+  
+ }
+});
+    
+    </script>
+</section>
+  <section class="sec2">
+    <div class="container">
+        <div class="glitch-img" style="background-image: url('creepy.jpg')"></div>
+        <p id="text">
+          
+        </p>
     </div>
         <script type="text/javascript">
 
@@ -39,14 +68,29 @@
                     scale: true,
                     blend: true,
                     blendModeType: 'hue',
-                    glitch1TimeMin: 300,
-                    glitch1TimeMax: 600,
-                    glitch2TimeMin: 20,
-                    glitch2TimeMax: 200
+                    glitch1TimeMin: 200,
+                    glitch1TimeMax: 400,
+                    glitch2TimeMin: 10,
+                    glitch2TimeMax: 100
                });
           });
 
         </script>
+  </section>
+<section class="secText">
 
+    <h1>Haunted House Tour</h1>
+    <p>As it's coming close to Halloween, I thought I'd put together a webpage
+    for a fictional Haunted House. I recently went to Loftus Hall in Wexford 
+    and was inspired by the tour and grounds to create a mock up Haunted House webpage.
+    </p>
+  </section>
+<footer>
+  <div>
+  <p>The Haunted House, The Old Meadow, Ballymoss Road,</p>
+  <p>Naas, Co. Kildare, D18 VE83, Ireland</p>
+  <p>Email: murphymark1990@gmail.com</p>
+  </div>
+</footer>
 </body>
 </html>
