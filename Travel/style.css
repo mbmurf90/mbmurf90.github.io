@@ -1,0 +1,152 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 1000px;
+	font-family: sans-serif;
+}
+
+.navbar{
+	background-color:  #03111c !important; 
+}
+
+nav a{
+	color: white;
+}
+
+i{
+    float: right;
+    margin-right: 10px;
+    color: white;
+}
+
+.sec1{
+	position: relative;
+	width: 100%;
+	height: 92vh;
+	background: url(beach.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.sec1 h2{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 200px;
+	font-size: 10vw;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 0 5px 15px rgba(0,0,0,.5);
+	animation: animate 5s linear infinite;
+}
+
+.sec1 a{
+	top: 250px;
+	position: relative;
+	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+	color: white;
+	font-size: 2vw;
+	font-weight: bold;
+}
+
+@keyframes animate{
+	0%{
+		transform: translate(0,0);
+	}
+
+	50%{
+		transform: translate(20px,20px);
+	}
+
+	100%{
+		transform: translate(0,0);
+	}
+
+}
+
+.sec2{
+	padding: 50px 100px;
+	position: relative;
+	height: auto;
+	background: #03111c;
+
+}
+
+.sec2 p{
+	color: #fff;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+.plane1{
+	position: absolute;
+	bottom: -100px;
+	left: -100px;
+	animation: move-plane1 3s linear infinite;
+}
+
+@keyframes move-plane1{
+	0%{
+		transform: translate(0, 0);
+	}
+
+	50%{
+		transform: translate(1500px, -600px);
+	}
+
+	50.1%, 100%{
+		transform: translate(1500px, -600px);
+	}	
+}
+
+.plane2{
+	position: absolute;
+	bottom: 500px;
+	right: -100px;
+	animation: move-plane2 5s linear infinite;
+}
+
+@keyframes move-plane2{
+	0%{
+		transform: translate(0,80px) rotate(0deg);
+	}
+
+	40%{
+		transform: translate(-1500px,-50px) rotateY(0deg);
+	}
+
+	40.1%{
+		transform: translate(-1500px,-50px) rotateY(0deg);
+	}
+
+	50%{
+		transform: translate(-1500px,-50px) rotateY(180deg);
+	}
+
+	50.1%{
+		transform: translate(-1500px,-50px) rotateY(180deg);
+	}
+
+	100%{
+		transform: translate(1500px,400px) rotateY(180deg);
+	}
+}
+
+#topBtn{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
